@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".MapsActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint=" where to search for in map"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/button1"
+        android:layout_alignStart="@+id/button1" />
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:text="Calculate Surface Area"
+        android:layout_toStartOf="@+id/button"
+        android:layout_alignBottom="@+id/button" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:onClick="locateMap"
+        android:text="Start Polygon"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/editText" />
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
